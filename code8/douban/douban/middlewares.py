@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+
+# Define here the models for your spider middleware
+#
+# See documentation in:
+# https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+
+from scrapy import signals
+
+
+
+
+
+class DoubanDownloaderMiddleware(object):
+    def process_request(self,request,spider):
+        request.meta['proxy'] = 'http://125.62.26.197:3128'
+        return None
